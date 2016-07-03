@@ -10,11 +10,17 @@ var mongoose = require('mongoose'),
  * Code Schema
  */
 var CodeSchema = new Schema({
-  name: {
+  description: {
     type: String,
     default: '',
-    required: 'Please fill Code name',
+    required: 'Please fill in the description',
     trim: true
+  },
+  code: {
+    type: String,
+    default: '',
+    required: 'Please fill in the code snippet',
+    trim:true
   },
   created: {
     type: Date,

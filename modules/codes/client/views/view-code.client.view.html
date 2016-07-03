@@ -1,6 +1,7 @@
 <section>
   <div class="page-header">
-    <h1 data-ng-bind="vm.code.name"></h1>
+    <p data-ng-bind="vm.code.description"></p>
+    <div hljs hljs-source="vm.code.code"></div>
   </div>
   <div class="pull-right"
        data-ng-show="vm.code.isCurrentUserOwner">
