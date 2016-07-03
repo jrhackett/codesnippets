@@ -25,8 +25,8 @@
     // Add the dropdown create item
     Menus.addSubMenuItem('topbar', 'codes', {
       title: 'Create Code',
-      state: 'codes.create',
-      roles: ['user']
+      state: 'codes.create'//,
+      //roles: ['user']
     });
   }
 })();
