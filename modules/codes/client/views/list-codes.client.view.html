@@ -6,14 +6,13 @@
     <a data-ng-repeat="code in vm.codes"
        data-ui-sref="codes.view({ codeId: code._id })"
        class="list-group-item">
+      <h4 class="list-group-item-heading" data-ng-bind="code.name"></h4>
+      <p class = "list-group-item-heading" data-ng-bind="code.description"></p>
       <small class="list-group-item-text">
-        Posted on
-        <span data-ng-bind="code.created | date:'mediumDate'"></span>
-        by
+        By
         <span data-ng-if="code.user" data-ng-bind="code.user.displayName"></span>
         <span data-ng-if="!code.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" data-ng-bind="code.description"></h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.codes.$resolved && !vm.codes.length">

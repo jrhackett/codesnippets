@@ -10,23 +10,15 @@
   function menuConfig(Menus) {
     // Set top bar menu items
     Menus.addMenuItem('topbar', {
-      title: 'Codes',
-      state: 'codes',
-      type: 'dropdown',
+      title: 'View all snippets',
+      state: 'codes.list',
       roles: ['*']
     });
 
-    // Add the dropdown list item
-    Menus.addSubMenuItem('topbar', 'codes', {
-      title: 'List Codes',
-      state: 'codes.list'
-    });
-
-    // Add the dropdown create item
-    Menus.addSubMenuItem('topbar', 'codes', {
-      title: 'Create Code',
+    Menus.addMenuItem('topbar', {
+      title: 'Create new snippet',
       state: 'codes.create',
       roles: ['user']
-    });
+    })
   }
 })();

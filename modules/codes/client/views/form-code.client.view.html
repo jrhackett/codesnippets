@@ -6,15 +6,29 @@
     <form name="vm.form.codeForm" class="form-horizontal" ng-submit="vm.save(vm.form.codeForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.code.name" id="name" class="form-control" placeholder="Enter the name here" required>
+          <div ng-messages="vm.form.codeForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="language">Language</label>
+          <input name="language" type="text" ng-model="vm.code.language" id="language" class="form-control" placeholder="Enter the language here" required>
+          <div ng-messages="vm.form.codeForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Language is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
           <label class="control-label" for="description">Description</label>
-          <input name="description" type="text" ng-model="vm.code.description" id="description" class="form-control" placeholder="Enter the description here" required>
+          <textarea rows = "3" name="description" type="text" ng-model="vm.code.description" id="description" class="form-control" placeholder="Enter the description here" required> </textarea>
           <div ng-messages="vm.form.codeForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Description is required.</p>
           </div>
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="code">Code</label>
-          <textarea name="code" type="text" ng-model="vm.code.code" id="code" class="form-control" placeholder="Enter the code here" required> </textarea>
+          <textarea  rows = "8" name="code" type="text" ng-model="vm.code.code" id="code" class="form-control" placeholder="Enter the code here" required> </textarea>
           <div ng-messages="vm.form.codeForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Code is required.</p>
           </div>
