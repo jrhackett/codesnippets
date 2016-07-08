@@ -19,6 +19,6 @@
       title: 'Create new snippet',
       state: 'codes.create',
       roles: ['user']
-    })
+    });
   }
 })();
